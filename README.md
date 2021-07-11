@@ -1,17 +1,17 @@
 # learning-reactjs
-What is React?
+__What is React?__
 A: A JavaScript Library for building User Interfaces. 
 
-Where do React Apps Run?
+__Where do React Apps Run?__
 A: React apps run in the browser. They don't run on the server, this gives us a great advantage, things happen instantly since they happen in the user's browser. We don't have to wait for a server response to get a new page or to render something new.
 
-Why React?
+__Why React?__
 A: The UI state becomes difficult to manage. In bigger JavaScript applications. React helps writing maintainable, manageable and reusable pieces of code by building components in your website.
 
-What are some React Alternatives?
+__What are some React Alternatives?__
 A: AngularJS, VueJS... pick your favorite.
 
-Logistics:
+__Logistics:__
 1. Refreshing Next Generation Javascript
 2. Understanding the Base Features and Syntax
 3. Working with Lists and Conditionals
