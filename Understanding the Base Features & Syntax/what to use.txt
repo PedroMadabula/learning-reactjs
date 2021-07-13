@@ -1,0 +1,11 @@
+1. npm or yarn: dependency management tool
+2. bundler: webpack
+3. babel + preset: javascript nextGen translations to other browsers
+4. development server: local server
+
+Create-React-App:
+1. open cmd
+2. type create-react-app -g
+(It creates a React app globally in the PC)
+3.create-react-app react-complete-guide --scripts-version 1.1.5
+(it creates a folder named react-complete-guide with react initial files)
