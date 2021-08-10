@@ -10,7 +10,8 @@ const app = props => {
         { name: 'Manu', age: 29},
         { name: 'Stephanie', age: 26}
       ],
-      otherState: 'Some other value'
+      otherState: 'Some other value',
+      showPersons: false
     }); 
 
     console.log(personsState);
@@ -27,21 +28,57 @@ const app = props => {
      });
     };
 
+    const nameChangedHandler = (event) => {
+      setPersonsState({
+        persons: [
+          { name: 'Pedro', age: 28},
+          { name: event.target.value, age: 29},
+          { name: "Fred", age: 29}
+        ]  
+      })
+    }
+
+    const style = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
+    const tooglePersonsHandler = () => {
+      const doesShow = personsState.showPersons;
+      setPersonsState({showPersons: !doesShow});
+    }
+
+    let persons = null;
+
+    if (personsState.showPersons) {
+      persons = (
+        <div >
+            <Person 
+              name={personsState.persons[0].name} 
+              age={personsState.persons[0].age}/>
+            <Person 
+              name={personsState.persons[1].name}
+              age={personsState.persons[1].age}
+              click = {switchNameHandler.bind(this, 'Pedrocas')}
+              changed={nameChangedHandler}> I'm gonna be a great Full Stack Dev by the end of this Year</Person>
+            <Person 
+              name={personsState.persons[2].name} 
+              age={personsState.persons[2].age}/>
+        </div>
+      );
+    }
+
     return (
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is really working!</p>
-        <button onClick={() => switchNameHandler('Maximiliano')}>Switch Name</button>
-        <Person 
-          name={personsState.persons[0].name} 
-          age={personsState.persons[0].age}/>
-        <Person 
-          name={personsState.persons[1].name}
-          age={personsState.persons[1].age}/>
-        <Person 
-          name={personsState.persons[2].name} 
-          age={personsState.persons[2].age}
-          click = {switchNameHandler.bind(this, 'Pedrocas')}> I'm gonna be a great Full Stack Dev by the end of this Year</Person>
+        <button 
+          style={style} 
+          onClick={tooglePersonsHandler}>Switch Name</button>
+        {persons}
       </div>
     );
     // return React.createElement('div',{className: 'App'},React.createElement('h1',null,'It works now!'));
