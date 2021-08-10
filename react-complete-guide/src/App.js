@@ -75,10 +75,24 @@ const app = props => {
       <div className="App">
         <h1>Hi, I'm a React App</h1>
         <p>This is really working!</p>
+<<<<<<< HEAD
         <button 
           style={style} 
           onClick={tooglePersonsHandler}>Switch Name</button>
         {persons}
+=======
+        <button onClick={switchNameHandler.bind(this, 'Pedrocas')}>Switch Name</button>
+        <Person 
+          name={personsState.persons[0].name} 
+          age={personsState.persons[0].age}/>
+        <Person 
+          name={personsState.persons[1].name}
+          age={personsState.persons[1].age}/>
+        <Person 
+          name={personsState.persons[2].name} 
+          age={personsState.persons[2].age}
+          click = {switchNameHandler.bind(this, 'Pedrocas')}> I'm gonna be a great Full Stack Dev by the end of this Year</Person>
+>>>>>>> parent of 6639d53 (anotherWayToPassArguments)
       </div>
     );
     // return React.createElement('div',{className: 'App'},React.createElement('h1',null,'It works now!'));
