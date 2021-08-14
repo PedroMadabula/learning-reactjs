@@ -316,3 +316,8 @@ node_modules/react/README.md
 node_modules/react/umd/react.development.js
 node_modules/react/umd/react.production.min.js
 node_modules/react/umd/react.profiling.min.js
+react-complete-guide/config/env.js
+react-complete-guide/config/jest/cssTransform.js
+react-complete-guide/config/jest/fileTransform.js
+react-complete-guide/config/paths.js
+react-complete-guide/config/polyfills.js
